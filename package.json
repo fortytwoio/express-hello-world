@@ -18,6 +18,7 @@
   "homepage": "https://github.com/fortytwoio/express-hello-world",
   "dependencies": {
     "coffee-script": "^1.8.0",
-    "express": "^4.8.5"
+    "express": "^4.8.5",
+    "getdebug": "^2.0.0"
   }
 }
