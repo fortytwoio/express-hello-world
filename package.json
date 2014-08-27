@@ -1,25 +1,35 @@
 {
-  "name": "express-hello-world",
-  "version": "1.0.0",
-  "description": "Simple Hello World express app",
-  "main": "index.js",
-  "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fortytwoio/express-hello-world.git"
-  },
-  "author": "Thomas Fritz <thomas.fritz@forty-two.io>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/fortytwoio/express-hello-world/issues"
-  },
-  "homepage": "https://github.com/fortytwoio/express-hello-world",
-  "dependencies": {
-    "coffee-script": "^1.8.0",
-    "express": "^4.8.5",
-    "getdebug": "^2.0.0"
-  }
+    "name": "express-hello-world",
+    "version": "1.0.0",
+    "description": "Simple Hello World express app",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fortytwoio/express-hello-world.git"
+    },
+    "author": "Thomas Fritz <thomas.fritz@forty-two.io>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/fortytwoio/express-hello-world/issues"
+    },
+    "browserify-shim": {
+        "react": "global:React",
+        "jquery": "global:jQuery"
+    },
+    "browserify": {
+        "transform": [
+            "coffee-reactify",
+            "browserify-shim"
+        ]
+    },
+    "homepage": "https://github.com/fortytwoio/express-hello-world",
+    "dependencies": {
+        "coffee-script": "^1.8.0",
+        "express": "^4.8.5",
+        "getdebug": "^2.0.0"
+    }
 }
