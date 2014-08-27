@@ -1,5 +1,5 @@
 express = require 'express'
-app = express()
+app = exports = module.exports = express()
 
 app.get '/', (request, response) ->
     response.send "<h1>Hello World</h1>"
